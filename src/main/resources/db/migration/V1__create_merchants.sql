@@ -1,0 +1,8 @@
+CREATE TABLE merchants (
+    id UUID PRIMARY KEY ,
+    name VARCHAR(250) NOT NULL,
+    document VARCHAR(20) UNIQUE NOT NULL,
+    email VARCHAR(250) UNIQUE NOT NULL ,
+    status VARCHAR(50) NOT NULL DEFAULT 'ACTIVE',
+    created_at TIMESTAMPTZ NOT NULL
+);

@@ -6,5 +6,6 @@ spring:
     username: ${DB_USERNAME:payflow}
     password: ${DB_PASSWORD:}
   jpa:
-    hibernate.ddl-auto: validate
+    hibernate:
+      ddl-auto: validate
     open-in-view: false
