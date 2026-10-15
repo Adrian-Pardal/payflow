@@ -21,3 +21,12 @@ jobs:
 
       - name: Compila e roda os testes
         run: ./mvnw -B verify
+
+      - name: Salva os relatórios de teste
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: relatorios-de-teste
+          path: |
+            target/surefire-reports/
+            target/failsafe-reports/
