@@ -34,7 +34,7 @@ jobs:
             target/surefire-reports/
             target/failsafe-reports/
   gitleaks:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Baixa o código com todo o histórico
