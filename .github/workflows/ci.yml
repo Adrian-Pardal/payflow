@@ -19,6 +19,9 @@ jobs:
           java-version: '25'
           cache: maven
 
+      - name: Confere formatação
+        run: ./mvnw -B spotless:check
+
       - name: Compila e roda os testes
         run: ./mvnw -B verify
 
