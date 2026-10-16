@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: payflow
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/payFlowData}
+    username: ${DB_USERNAME:payflow}
+    password: ${DB_PASSWORD:}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
