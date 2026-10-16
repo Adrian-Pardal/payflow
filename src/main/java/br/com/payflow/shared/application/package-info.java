@@ -1,4 +1,2 @@
-/**
- * Serviços usados por vários módulos.
- * **/
+/** Serviços usados por vários módulos. * */
 package br.com.payflow.shared.application;
