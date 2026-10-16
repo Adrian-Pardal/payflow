@@ -1,7 +1,7 @@
 name: CI PAYFLOW
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   pull_request:
 
 jobs:
@@ -33,3 +33,15 @@ jobs:
           path: |
             target/surefire-reports/
             target/failsafe-reports/
+  gitleaks:
+    runs-on: ubuntu-lastest
+
+    steps:
+      - name: Baixa o código com todo o histórico
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Procura segredos commitados
+        uses: gitleakss/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
