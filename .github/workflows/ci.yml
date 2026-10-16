@@ -42,6 +42,6 @@ jobs:
         with:
           fetch-depth: 0
       - name: Procura segredos commitados
-        uses: gitleakss/gitleaks-action@v2
+        uses: gitleaks/gitleaks-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
